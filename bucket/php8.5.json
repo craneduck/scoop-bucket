@@ -1,5 +1,5 @@
 {
-    "version": "8.5.8",
+    "version": "8.5.11",
     "homepage": "https://www.php.net/downloads.php?os=windows&osvariant=windows-downloads&version=8.5",
     "description": "PHP 8.5 (thread-safe/TS build) for Windows. Widely used open-source scripting language for web development.",
     "license": {
@@ -11,12 +11,12 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://downloads.php.net/~windows/releases/archives/php-8.5.8-Win32-vs17-x86.zip",
-            "hash": "86a01ec179c6aba884e72b8b399589b6aab7749ee6bf782adb8c335f7c756778"
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.5.11-Win32-vs17-x86.zip",
+            "hash": "f137da9dc16de3b6c096ceb1071a54630655af4de2e64f1fbf578cc91ba5bf4d"
         },
         "64bit": {
-            "url": "https://downloads.php.net/~windows/releases/archives/php-8.5.8-Win32-vs17-x64.zip",
-            "hash": "a7323e50a1e29fddc278d9297ca9a4ec134bd1cca5396af39115284a125cab2f"
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.5.11-Win32-vs17-x64.zip",
+            "hash": "c83d5a1e0d760fb026ce695d8a70a73a4c81ac224b3e5c425406b23a7d53e1de"
         }
     },
     "post_install": "if($bucket) { . \"$(Find-BucketDirectory $bucket\\bin\\postinstall.ps1)\" -dir \"$dir\" }",
