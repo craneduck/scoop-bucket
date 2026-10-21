@@ -1,5 +1,5 @@
 {
-    "version": "8.4.16",
+    "version": "8.4.26",
     "homepage": "https://www.php.net/downloads.php?os=windows&osvariant=windows-downloads&version=8.4",
     "description": "PHP 8.4 (thread-safe/TS build) for Windows. Widely used open-source scripting language for web development.",
     "license": {
@@ -11,12 +11,12 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://downloads.php.net/~windows/releases/archives/php-8.4.16-Win32-vs17-x86.zip",
-            "hash": "77630c6cf305eb761989fdc1da430a88b6ec6dc6a6becb39fc7fb1b05047f0cf"
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.4.26-Win32-vs17-x86.zip",
+            "hash": "d48e2e0b6ca6568216ad0123596323dc30d19c01f2353b507fc861c8b23d523c"
         },
         "64bit": {
-            "url": "https://downloads.php.net/~windows/releases/archives/php-8.4.16-Win32-vs17-x64.zip",
-            "hash": "e638541bbf8e1794f57a3c2522b09e6cf8bf33f0c09b86050acd8ffd683e7d6a"
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.4.26-Win32-vs17-x64.zip",
+            "hash": "6e56f0e932e92bfdce208d3a7e6068f6e2f7a19fc2922a5f856fb085f61673f3"
         }
     },
     "post_install": "if($bucket) { . \"$(Find-BucketDirectory $bucket\\bin\\postinstall.ps1)\" -dir \"$dir\" }",
