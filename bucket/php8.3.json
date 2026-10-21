@@ -1,0 +1,49 @@
+{
+    "version": "8.3.29",
+    "homepage": "https://www.php.net/downloads.php?os=windows&osvariant=windows-downloads&version=8.3",
+    "description": "PHP 8.3 (thread-safe/TS build) for Windows. Widely used open-source scripting language for web development.",
+    "license": {
+        "identifier": "PHP-3.01",
+        "url": "https://www.php.net/license/"
+    },
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.3.29-Win32-vs16-x86.zip",
+            "hash": "40cc8fd11cd96e7292528d2a086aeef8db738d1da7d8b1cd8e846d18c13fbcb0"
+        },
+        "64bit": {
+            "url": "https://downloads.php.net/~windows/releases/archives/php-8.3.29-Win32-vs16-x64.zip",
+            "hash": "d7dc35ae06f39aa16cc74eec19e9c199a70e21294eac458a1c79c12e0e1aacb3"
+        }
+    },
+    "post_install": "if($bucket) { . \"$(Find-BucketDirectory $bucket\\bin\\postinstall.ps1)\" -dir \"$dir\" }",
+    "env_set": {
+        "PHP_INI_SCAN_DIR": "$persist_dir;$dir\\conf.d;"
+    },
+    "bin": [
+        "php.exe",
+        "php-cgi.exe"
+    ],
+    "persist": "conf.d",
+    "checkver": {
+        "url": "https://www.php.net/releases/branches.php",
+        "jsonpath": "$.[?(@.branch == '8.3')].latest"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://downloads.php.net/~windows/releases/archives/php-$version-Win32-vs16-x86.zip"
+            },
+            "64bit": {
+                "url": "https://downloads.php.net/~windows/releases/archives/php-$version-Win32-vs16-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://downloads.php.net/~windows/releases/releases.json",
+            "jsonpath": "$..[?(@.path == '$basename')].sha256"
+        }
+    }
+}
